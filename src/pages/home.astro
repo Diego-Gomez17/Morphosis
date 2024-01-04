@@ -1,0 +1,139 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Schedules from "../components/Schedules.astro";
+import Date from "../components/Date.astro"
+import Artist from "../components/Artist.astro"
+---
+
+<Layout title="Welcome to Morphosis.">
+  <main class="h-[100rem] w-full">
+    <h2 class="text-center pt-10 text-2xl">
+      <span class="text-gradient ">Phased.</span> presenta
+    </h2>
+    <h1 class="text-center">
+        <span class="text-gradient text-8xl">Morphosis</span>
+        <br/>
+        <b class=" italic text-5xl">Live the change</b> 
+    </h1>
+    <div class="flex flex-col w-3/4 mx-auto">
+      <div
+        class="bg-black/80 rounded-md p-5 border-2 border-purple-800 drop-shadow-2xl"
+      >
+        <h3 class="text-center text-4xl font-bold" style="font-family: 'Blanka';">Con</h3>
+        <div class="flex gap-2 justify-center">
+          <p class="pl-5 m-2 text-3xl" style="font-family: Blanka;">MERO</p>
+          <p class="pl-5 m-2 text-3xl" style="font-family: Blanka;">MADNNESS</p>
+          <p class="pl-5 m-2 text-3xl" style="font-family: Blanka;">
+            BASTIAN DEKKER
+          </p>
+          <p class="pl-5 m-2 text-3xl" style="font-family: Blanka;">VLAS</p>
+          <p class="pl-5 m-2 text-3xl" style="font-family: Blanka;">ANDRIIC</p>
+          <br />
+        </div>
+      </div>
+      <div class="pt-3">
+        <Schedules />
+      </div>
+      <div class="pt-3">
+        <Date />
+      </div>
+      <div class="pt-3">
+        <Artist />
+      </div>
+    </div>
+  </main>
+</Layout>
+
+<style is:global>
+  * {
+    font-family: "Montserrat";
+  }
+  main {
+    color: white;
+    font-size: 20px;
+    line-height: 1.6;
+    background-image: url("/svg/background.svg");
+    background-image: no-repeat;
+    background-image: fixed;
+    background-image: center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
+  .astro-a {
+    position: absolute;
+    top: -32px;
+    left: 50%;
+    transform: translatex(-50%);
+    width: 220px;
+    height: auto;
+    z-index: -1;
+  }
+  h1 {
+    font-size: 4rem;
+    font-weight: 700;
+    line-height: 1;
+    text-align: center;
+    margin-bottom: 1em;
+  }
+  .text-gradient {
+    background-image: var(--accent-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 400%;
+    background-position: 0%;
+    font-family: "Blanka";
+  }
+  .instructions {
+    margin-bottom: 2rem;
+    border: 1px solid rgba(var(--accent-light), 25%);
+    background: linear-gradient(
+      rgba(var(--accent-dark), 66%),
+      rgba(var(--accent-dark), 33%)
+    );
+    padding: 1.5rem;
+    border-radius: 8px;
+  }
+  .instructions code {
+    font-size: 0.8em;
+    font-weight: bold;
+    background: rgba(var(--accent-light), 12%);
+    color: rgb(var(--accent-light));
+    border-radius: 4px;
+    padding: 0.3em 0.4em;
+  }
+  .instructions strong {
+    color: rgb(var(--accent-light));
+  }
+  .link-card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
+    gap: 2rem;
+    padding: 0;
+  }
+
+  /* ===== Scrollbar CSS ===== */
+
+  body {
+    --sb-track-color: #293033;
+    --sb-thumb-color: #5c4386;
+    --sb-size: 10px;
+
+    scrollbar-color: var(--sb-thumb-color) var(--sb-track-color);
+  }
+
+  body::-webkit-scrollbar {
+    width: var(--sb-size);
+  }
+
+  body::-webkit-scrollbar-track {
+    background: var(--sb-track-color);
+    border-radius: 10px;
+  }
+
+  body::-webkit-scrollbar-thumb {
+    background: var(--sb-thumb-color);
+    border-radius: 10px;
+  }
+</style>

@@ -1,0 +1,67 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Card from "../components/Card.astro";
+import Person from "../components/Person.astro";
+import Glitch from "../components/Glitch.astro";
+---
+
+<Layout title="Morphosis is comming...">
+  <div class="title mx-auto sm:w-1/2 md:w-3/4 lg:w-full">
+    <a href="/home" class="animate-ping animate-once animate-ease-linear animate-reverse animate-fill-forwards"><h1 class=" text-center sm:text-3xl md:text-7xl lg:text-9xl">MORPHOSIS<br /> is comming...</h1></a>
+  </div>
+</Layout>
+
+<style>
+  @import url("https://fonts.googleapis.com/css?family=Montserrat");
+  body {
+    background-color: rgb(0, 0, 0);
+  }
+
+  .title {
+    font-family: "Montserrat";
+    text-align: center;
+    color: #fff;
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    flex-direction: column;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    height: 100vh;
+    letter-spacing: 3px;
+  }
+
+  h1 {
+    background-image: url("/gif/smoke.gif");
+    background-size: auto;
+    color: rgba(255, 255, 255, 0.178);
+    -moz-background-clip: text;
+    -webkit-background-clip: text;
+    text-transform: uppercase;
+    line-height: 0.75;
+    margin: 10px 0;
+  }
+  /* styling my button */
+
+  .white-mode {
+    text-decoration: none;
+    padding: 7px 10px;
+    background-color: #122;
+    border-radius: 3px;
+    color: #fff;
+    -webkit-transition: 0.35s ease-in-out;
+    transition: 0.35s ease-in-out;
+    position: absolute;
+    left: 15px;
+    bottom: 15px;
+    font-family: "Montserrat";
+  }
+
+  .white-mode:hover {
+    background-color: #fff;
+    color: #122;
+  }
+</style>
