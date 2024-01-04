@@ -1,61 +1,33 @@
 ---
 interface Props {
-	title: string;
-	body: string;
-	href: string;
+  title: string;
+  body: string;
+  href: string;
 }
 
 const { href, title, body } = Astro.props;
 ---
 
-<li class="link-card">
-	<a href={href}>
-		<h2>
-			{title}
-			<span>&rarr;</span>
-		</h2>
-		<p>
-			{body}
-		</p>
-	</a>
-</li>
+
+<a href="#" id="card" class="flex flex-col  bg-white border border-gray-200 rounded-lg shadow md:flex-row md:max-w-lg sm:flex-col-reverse">
+    <img class="object-cover w-full rounded-t-lg h-auto md:h-auto md:w-32 md:rounded-none md:rounded-s-lg" src={href} alt="">
+    <div class="flex flex-col justify-between p-4 leading-normal ">
+        <h5 class="mb-2 text-2xl font-bold tracking-tight text-white dark:text-white" style="font-family: blanka;">{title}</h5>
+        <p class="mb-3 font-normal text-white dark:text-white">Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p>
+    </div>
+</a>
+
+
 <style>
-	.link-card {
-		list-style: none;
-		display: flex;
-		padding: 1px;
-		background-color: #23262d;
-		background-image: none;
-		background-size: 400%;
-		border-radius: 7px;
-		background-position: 100%;
-		transition: background-position 0.6s cubic-bezier(0.22, 1, 0.36, 1);
-		box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.1);
-	}
-	.link-card > a {
-		width: 100%;
-		text-decoration: none;
-		line-height: 1.4;
-		padding: calc(1.5rem - 1px);
-		border-radius: 8px;
-		color: white;
-		background-color: #23262d;
-		opacity: 0.8;
-	}
-	h2 {
-		margin: 0;
-		font-size: 1.25rem;
-		transition: color 0.6s cubic-bezier(0.22, 1, 0.36, 1);
-	}
-	p {
-		margin-top: 0.5rem;
-		margin-bottom: 0;
-	}
-	.link-card:is(:hover, :focus-within) {
-		background-position: 0;
-		background-image: var(--accent-gradient);
-	}
-	.link-card:is(:hover, :focus-within) h2 {
-		color: rgb(var(--accent-light));
-	}
+  #card {
+	background-image: url('/svg/background.svg');
+	/* background: linear-gradient(45deg,transparent 34%, #951cfa 35%, #951cfa 40%, transparent 41%, transparent 59%, #951cfa  60%, #951cfa 65%, transparent 66%),linear-gradient(135deg,transparent 34%, #951cfa 35%, #951cfa 40%, transparent 41%, transparent 59%, #951cfa  60%, #951cfa 65%, transparent 66%), radial-gradient(#951cfa 10%, transparent 11%), radial-gradient(circle at left,#951cfa 5%, transparent 6%), radial-gradient(circle at right,#951cfa 5%, transparent 6%), radial-gradient(circle at top,#951cfa 5%, transparent 6%), radial-gradient(circle at bottom,#951cfa 5%, transparent 6%);
+        background-size: 3em 3em;
+        background-color: #000000;
+        opacity: 1 */
+  }
+  img {
+
+    filter: drop-shadow(10px 8px 8px #171518);
+  }
 </style>

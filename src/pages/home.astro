@@ -3,10 +3,11 @@ import Layout from "../layouts/Layout.astro";
 import Schedules from "../components/Schedules.astro";
 import Date from "../components/Date.astro"
 import Artist from "../components/Artist.astro"
+import Collaborators from "../components/collaborators.astro";
 ---
 
 <Layout title="Welcome to Morphosis.">
-  <main class="h-[100rem] w-full">
+  <main class=" w-full h-[150rem] ">
     <h2 class="text-center pt-10 text-2xl">
       <span class="text-gradient ">Phased.</span> presenta
     </h2>
@@ -15,7 +16,7 @@ import Artist from "../components/Artist.astro"
         <br/>
         <b class=" italic text-5xl">Live the change</b> 
     </h1>
-    <div class="flex flex-col w-3/4 mx-auto">
+    <div class="flex flex-col flex-grow-1 w-3/4 mx-auto">
       <div
         class="bg-black/80 rounded-md p-5 border-2 border-purple-800 drop-shadow-2xl"
       >
@@ -40,6 +41,9 @@ import Artist from "../components/Artist.astro"
       <div class="pt-3">
         <Artist />
       </div>
+      <!-- <div class="pt-3">
+        <Collaborators />
+      </div> -->
     </div>
   </main>
 </Layout>
@@ -84,33 +88,6 @@ import Artist from "../components/Artist.astro"
     background-size: 400%;
     background-position: 0%;
     font-family: "Blanka";
-  }
-  .instructions {
-    margin-bottom: 2rem;
-    border: 1px solid rgba(var(--accent-light), 25%);
-    background: linear-gradient(
-      rgba(var(--accent-dark), 66%),
-      rgba(var(--accent-dark), 33%)
-    );
-    padding: 1.5rem;
-    border-radius: 8px;
-  }
-  .instructions code {
-    font-size: 0.8em;
-    font-weight: bold;
-    background: rgba(var(--accent-light), 12%);
-    color: rgb(var(--accent-light));
-    border-radius: 4px;
-    padding: 0.3em 0.4em;
-  }
-  .instructions strong {
-    color: rgb(var(--accent-light));
-  }
-  .link-card-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
-    gap: 2rem;
-    padding: 0;
   }
 
   /* ===== Scrollbar CSS ===== */

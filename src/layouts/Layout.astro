@@ -20,7 +20,7 @@ import { ViewTransitions, slide } from 'astro:transitions';
 
     <title>{title}</title>
   </head>
-  <body>
+  <body class=" min-h-screen">
     <slot />
   </body>
 </html>
@@ -48,6 +48,7 @@ import { ViewTransitions, slide } from 'astro:transitions';
     font-family: system-ui, sans-serif;
     background: #13151a;
     background-size: 224px;
+    scroll-behavior: smooth;
   }
   code {
     font-family:

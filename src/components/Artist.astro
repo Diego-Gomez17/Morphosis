@@ -1,14 +1,19 @@
 ---
-
+import Card from "./Card.astro";
 ---
 
 <div
-  class="bg-black/80 rounded-md p-5 border-2 border-purple-800 drop-shadow-2xl text-center"
+  class="flex flex-col  bg-black/80 rounded-md p-5 border-2 border-purple-800 drop-shadow-2xl text-center"
 > 
 
 <h2 style=" font-family: 'Blanka';" class=" text-3xl text-center">Artistas</h2>
-<div>
-  
+<br>
+<div class="flex flex-row flex-wrap gap-5 justify-center items-start">  
+  <Card title="mero" body="tech" href="/Image/mero.png" />
+  <Card title="madnness" body="tech" href="/Image/madnness.png" />
+  <Card title="Bastian Dekker" body="tech" href="/Image/dekker.png" />
+  <Card title="vlas" body="tech" href="/Image/vlas.png" />
+  <Card title="andriiic" body="tech" href="/Image/andriiic.png" />
 </div>
 
 </div>
