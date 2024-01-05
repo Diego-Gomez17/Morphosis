@@ -6,27 +6,79 @@
   class="bg-black/80 rounded-md p-5 border-2 border-purple-800 drop-shadow-2xl text-center"
 >
   <div class="grid grid-cols-2 gap-4 mx-auto w-full">
-    <div class="flex flex-col gap-3 ">
+    <div class="flex flex-col gap-3">
       <p class="text-3xl text-center">El</p>
-      <p class="text-5xl">20 <br />Enero</p>
+      <p class="Date text-5xl">20 <br />Enero</p>
       <p class="text-2xl">A las</p>
-      <p class="text-5xl">21:00</p>
+      <p class="Hours text-5xl">21:00</p>
     </div>
-    <div class="flex flex-col gap-6">
-      <div class="text-center pt-10">
-        <p class="text-2xl">Entrada</p>
-        <p class="text-4xl font-bold" style=" font-family:Montserrat;">$3000</p>
+    <div class="flex flex-col gap-5">
+      <div class="text-center">
+        <p class="Hours text-2xl">Entrada</p>
+        <p class="Date text-4xl font-bold" style=" font-family:Montserrat;">$3000</p>
       </div>
       <div class="">
         <p class="text-3xl">En</p>
-        <p class="text-2xl pt-3" style=" font-family: Montserrat;">Benavente #414, Coquimbo</p>
-        <p class="text-2xl" style=" font-family: Montserrat;">Pub Punto de encuentro</p>
+        <p class="text-2xl " style=" font-family: Montserrat;">
+          Benavente #414, Coquimbo
+        </p>
+        <p class="text-2xl" style=" font-family: Montserrat;">
+          Pub Punto de encuentro
+        </p>
       </div>
     </div>
   </div>
 </div>
 <style>
   p {
-    font-family: 'blanka', 'Montserrat';
+    font-family: "blanka", "Montserrat";
+  }
+
+  .Date{
+    animation: neon 2s ease-in-out alternate infinite;
+
+  }
+  .Hours{
+    animation: humo 2s ease-in-out alternate infinite;
+
+  }
+
+  /* === KeyFrame === */
+  @keyframes neon {
+    0% {
+      color: rgba(128, 0, 128, 0.8); /* Púrpura */
+      text-shadow:
+        0 0 10px rgba(128, 0, 128, 0.8),
+        0 0 20px rgba(128, 0, 128, 0.8),
+        0 0 30px rgba(128, 0, 128, 0.8);
+    }
+    50% {
+      color: rgb(172, 25, 172); /* Púrpura intenso */
+      text-shadow:
+        0 0 20px rgba(128, 0, 128, 1),
+        0 0 30px rgba(128, 0, 128, 1),
+        0 0 40px rgba(128, 0, 128, 1);
+    }
+    100% {
+      color: rgba(223, 18, 223, 0.8); /* Púrpura */
+      text-shadow:
+        0 0 10px rgba(128, 0, 128, 0.8),
+        0 0 20px rgba(128, 0, 128, 0.8),
+        0 0 30px rgba(128, 0, 128, 0.8);
+    }
+  }
+  @keyframes humo {
+    0% {
+      color: rgba(255, 255, 255, 0.8);
+      text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+    }
+    50% {
+      color: rgba(255, 255, 255, 0.4);
+      text-shadow: 0 0 20px rgba(255, 255, 255, 0.4);
+    }
+    100% {
+      color: rgba(255, 255, 255, 0.8);
+      text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+    }
   }
 </style>
