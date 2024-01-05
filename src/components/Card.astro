@@ -12,7 +12,7 @@ const { href, title, body } = Astro.props;
 <a href="#" id="card" class="flex flex-col  bg-white border border-gray-200 rounded-lg shadow md:flex-row md:max-w-lg sm:flex-col-reverse">
     <img class="object-cover w-full rounded-t-lg h-auto md:h-auto md:w-32 md:rounded-none md:rounded-s-lg" src={href} alt="">
     <div class="flex flex-col justify-between p-4 leading-normal ">
-        <h5 class="mb-2 text-2xl font-bold tracking-tight text-white dark:text-white" style="font-family: blanka, Montserrat;">{title}</h5>
+        <h5 class="mb-2 text-2xl font-bold tracking-tight text-white dark:text-white uppercase" style="font-family: blanka, Montserrat;">{title}</h5>
         <p class="mb-3 font-normal text-white dark:text-white">Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p>
     </div>
 </a>
