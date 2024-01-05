@@ -3,31 +3,68 @@ interface Props {
   title: string;
   body: string;
   href: string;
+  insta: string;
 }
 
-const { href, title, body } = Astro.props;
+const { href, title, body, insta } = Astro.props;
 ---
 
-
-<a href="#" id="card" class="flex flex-col  bg-white border border-gray-200 rounded-lg shadow md:flex-row md:max-w-lg sm:flex-col-reverse">
-    <img class="object-cover w-full rounded-t-lg h-auto md:h-auto md:w-32 md:rounded-none md:rounded-s-lg" src={href} alt="">
-    <div class="flex flex-col justify-between p-4 leading-normal ">
-        <h5 class="mb-2 text-2xl font-bold tracking-tight text-white dark:text-white uppercase" style="font-family: blanka, Montserrat;">{title}</h5>
-        <p class="mb-3 font-normal text-white dark:text-white">Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p>
-    </div>
-</a>
-
+<div
+  id="card"
+  class="flex flex-col-reverse overflow-hidden justify-between bg-white border border-gray-200 rounded-lg md:w-[450px] lg:h-36 shadow md:flex-row md:max-w-lg sm:flex-col-reverse"
+>
+  <img
+    class="object-cover w-full rounded-t-lg h-1/2 md:h-auto md:w-32 md:rounded-none md:rounded-s-lg"
+    src={href}
+    alt={title}
+  />
+  <div class="flex flex-col justify-between p-4 leading-normal">
+    <h5
+      class="Text-neon text-2xl font-bold tracking-tight text-white dark:text-white uppercase"
+      style="font-family: blanka, Montserrat;"
+    >
+      {title}
+    </h5>
+    <p class="Text-purple text-3xl md:text-lg text-white dark:text-white font-extrabold">
+      {body}
+    </p>
+    <a href={insta} class="flex justify-center"><img class=" w-16 md:w-10" src="/svg/insta.svg" alt={insta}></a>
+    
+  </div>
+</div>
 
 <style>
   #card {
-	background-image: url('/svg/background.svg');
-	/* background: linear-gradient(45deg,transparent 34%, #951cfa 35%, #951cfa 40%, transparent 41%, transparent 59%, #951cfa  60%, #951cfa 65%, transparent 66%),linear-gradient(135deg,transparent 34%, #951cfa 35%, #951cfa 40%, transparent 41%, transparent 59%, #951cfa  60%, #951cfa 65%, transparent 66%), radial-gradient(#951cfa 10%, transparent 11%), radial-gradient(circle at left,#951cfa 5%, transparent 6%), radial-gradient(circle at right,#951cfa 5%, transparent 6%), radial-gradient(circle at top,#951cfa 5%, transparent 6%), radial-gradient(circle at bottom,#951cfa 5%, transparent 6%);
-        background-size: 3em 3em;
-        background-color: #000000;
-        opacity: 1 */
+    background-image: url("/svg/background.svg");
   }
   img {
-
     filter: drop-shadow(10px 8px 8px #171518);
+  }
+  .Text-purple {
+    color: rgb(173, 93, 240);
+    text-shadow:
+      0 0 10px rgba(106, 30, 168, 0.925),
+      0 0 20px rgba(106, 30, 168, 0.925),
+      0 0 30px rgba(106, 30, 168, 0.925),
+      0 0 40px rgba(106, 30, 168, 0.925);
+    letter-spacing: 2px;
+    transition: text-shadow 0.4s; 
+  }
+  .Text-neon {
+    color: white;
+    text-shadow:
+      0 0 10px rgba(255, 255, 255, 0.5),
+      0 0 20px rgba(255, 255, 255, 0.5),
+      0 0 30px rgba(255, 255, 255, 0.5),
+      0 0 40px rgba(255, 255, 255, 0.5);
+    letter-spacing: 2px;
+    transition: text-shadow 0.4s; 
+  }
+  .Text-neon:hover {
+    text-shadow:
+      0 0 10px #892be28f,
+      0 0 20px #892be28f,
+      0 0 30px #892be28f,
+      0 0 40px #892be28f;
   }
 </style>
