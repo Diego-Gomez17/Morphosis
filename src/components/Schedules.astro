@@ -4,7 +4,7 @@
 <div class=" bg-black/80 rounded-md p-5 border-2 border-purple-800 drop-shadow-2xl">
     <h2 style=" font-family: Blanka, Montserrat;" class=" text-3xl text-center">Cronograma</h2>
     <div class="">
-        <table class="table-auto mx-auto mt-10 border-collapse border border-slate-500 w-1/2 text-center">
+        <table class="table-auto mx-auto mt-10 border-collapse border border-slate-500 text-center w-full ">
             <thead>
                 <tr>
                     <th class="border border-slate-600">Horario</th>
@@ -42,9 +42,17 @@
     </div>
 </div>
 
-<script>
-
-</script>
+<style>
+tbody tr{
+	transition: all .125s ease-in-out;
+	&:nth-child(2n-1) {
+		background-color: #f5f5f534;
+	}
+	&:hover {
+		background-color: rgba(187, 10, 223, 0.623);
+	}
+}
+</style>
 	
 
 	
