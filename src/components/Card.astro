@@ -11,7 +11,7 @@ const { href, title, body, insta } = Astro.props;
 
 <div
   id="card"
-  class="flex flex-col-reverse overflow-hidden justify-between bg-white border border-gray-200 rounded-lg md:w-[450px] lg:h-36 shadow md:flex-row md:max-w-lg sm:flex-col-reverse"
+  class="flex flex-col-reverse overflow-hidden justify-evenly bg-white border border-gray-200 rounded-lg md:w-[450px] lg:h-36 shadow md:flex-row md:max-w-lg sm:flex-col-reverse"
 >
   <img
     class="object-cover w-full rounded-t-lg h-1/2 md:h-auto md:w-32 md:rounded-none md:rounded-s-lg"
@@ -25,10 +25,12 @@ const { href, title, body, insta } = Astro.props;
     >
       {title}
     </h5>
-    <p class="Text-purple text-3xl md:text-lg text-white dark:text-white font-extrabold">
-      {body}
-    </p>
-    <a href={insta} class="flex justify-center"><img class=" w-16 md:w-10" src="/svg/insta.svg" alt={insta}></a>
+    <div class="flex justify-center flex-col items-center">
+      <p class="Text-purple text-3xl md:text-lg text-white dark:text-white font-extrabold">
+        {body}
+      </p>
+      <a href={insta} class=""><img class=" w-16 md:w-10" src="/svg/insta.svg" alt={insta}></a>
+    </div>
     
   </div>
 </div>

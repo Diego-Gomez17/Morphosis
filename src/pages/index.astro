@@ -3,15 +3,13 @@ import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout title="Morphosis is comming...">
-  <div class="">
     <a
       href="/home"
-      class="title  mx-auto w-1/2 md:w-3/4 lg:w-full animate-ping animate-once animate-ease-linear animate-reverse animate-fill-forwards"
-      ><h1 class="text-center  text-5xl md:text-7xl lg:text-8xl font-medium">
+      class="title  mx-auto overflow-hidden"
+      ><h1 class="text-center  text-5xl md:text-7xl lg:text-8xl font-medium animate-ping animate-once animate-ease-linear animate-reverse animate-fill-forwards">
         MORPHOSIS<br>is coming...
       </h1></a
     >
-  </div>
 </Layout>
 
 <style>
@@ -24,14 +22,10 @@ import Layout from "../layouts/Layout.astro";
     font-family: "Montserrat";
     text-align: center;
     color: #fff;
-    display: -webkit-box;
     display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
     flex-direction: column;
     -webkit-box-align: center;
     align-items: center;
-    -webkit-box-pack: center;
     justify-content: center;
     height: 100vh;
     letter-spacing: 3px;
